@@ -1,0 +1,12 @@
+
+
+<?phpif(isset($_GET['username'])){
+    header(string: "Location: page1.php");
+    exit();
+}
+
+$username = $_GET['username'];
+$url ="page1.php?username= " .$username;
+echo "Hello $username, do you want to go to <a href='$url'>page2</a>";
+<?php require('template/header.phtml') ?>
+<?php require('template/footer.phtml') ?>

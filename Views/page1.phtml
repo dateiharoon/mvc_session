@@ -1,0 +1,19 @@
+<?php
+if(isset($_POST['username'])){
+    $username = $_POST['username'];
+    $url="index.php?username=" . $username;
+   header(string: 'Location: ' .$url);
+    exit();
+    //echo $username;
+}
+?>
+<?php require('template/header.phtml') ?>
+
+<h3>Welcome to Page1</h3>
+<form method="post" action="page1.php">
+<input type="text" name="username" placeholder="What is your Name?">
+<input type="submit" value="Save">
+
+
+
+<?php require('template/footer.phtml') ?>
