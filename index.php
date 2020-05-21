@@ -9,12 +9,12 @@ require_once('Views/index.phtml');
 
 	if (isset($_SESSION['username'])) {
 		$url = "page1.php";
-		//header('Location: ' . $url);
+		header("Location: " . $url);
 		exit();
 	} else if (isset($_POST['username'])) {
 		$username = $_POST['username'];
 		$_SESSION['username'] = $username;
 		$url = "page1.php";
-		//header('Location: ' . $url);
+		header("Location: " . $url);
 		exit();
 	}

@@ -1,5 +1,7 @@
 <?php
-
+$view = new stdClass();
+$view->pageTitle = 'Page1';
+require_once('Views/page1.phtml');
 
 session_start();
 
@@ -12,7 +14,5 @@ session_start();
 	$url = "page2.php?username=" . $username;
     echo "Hello $username, do you want to go to <a href='$url'>page2</a>";
     
-    $view = new stdClass();
-$view->pageTitle = 'Page1';
-require_once('Views/page1.phtml');
+    
 ?>

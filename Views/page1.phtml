@@ -1,12 +1,4 @@
-<?php
-if(isset($_POST['username'])){
-    $username = $_POST['username'];
-    $url="index.php?username=" . $username;
-   header(string: 'Location: ' .$url);
-    exit();
-    //echo $username;
-}
-?>
+
 <?php require('template/header.phtml') ?>
 
 <h3>Welcome to Page1</h3>
@@ -17,3 +9,15 @@ if(isset($_POST['username'])){
 
 
 <?php require('template/footer.phtml') ?>
+
+
+
+<?php
+if(isset($_POST['username'])){
+    $username = $_POST['username'];
+    $url="index.php?username=" . $username;
+   header(string: 'Location: ' .$url);
+    exit();
+    //echo $username;
+}
+?>
